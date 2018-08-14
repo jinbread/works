@@ -70,8 +70,12 @@ class Scene extends Component{
     }
 
     render(){
+        const width = window.innerWidth
+        const height = window.innerHeight
+        
         return(
             <div
+                width={width} height={height}
                 ref={(mount) => { this.mount = mount }}
             />
         )
