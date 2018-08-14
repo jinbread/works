@@ -10,7 +10,7 @@ class Scene extends Component{
         this.scene = new THREE.Scene()
         
         //ADD CAMERA
-        this.camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 1000)
+        this.camera = new THREE.PerspectiveCamera(75, width / height, 3, 1000)
         this.camera.position.z = 200
         
         //ADD RENDERER
@@ -23,11 +23,11 @@ class Scene extends Component{
         this.group = new THREE.Group()
         this.scene.add(this.group)
         
-        const max = 150
-        const min = -150
+        const max = 200
+        const min = -200
 
-        for(let i = 0; i < 200; i++) {
-            const geometry = new THREE.BoxGeometry(4, 4, 4)
+        for(let i = 0; i < 400; i++) {
+            const geometry = new THREE.SphereGeometry(Math.random() * 3 - 3.5, 32, 32)
             const material = new THREE.MeshBasicMaterial({ color: Math.random() * 0x808008 + 0x808080, wireframe: false })
             this.cube = new THREE.Mesh(geometry, material)
             this.cube.position.x = Math.random() * (max - min) - max
