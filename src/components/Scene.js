@@ -72,7 +72,6 @@ class Scene extends Component{
     render(){
         return(
             <div
-                className={background-canvas}
                 ref={(mount) => { this.mount = mount }}
             />
         )
