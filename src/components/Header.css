@@ -17,12 +17,13 @@
 
 .Header a {
 	color: white;
-	font-weight: 700;
+	font-weight: 500;
+	font-size: 16px;
 }
 
 .Header button {
 	padding: 8px 20px;
-	font-size: 20px;
+	font-size: 14px;
 	background: #56CCF2;
 	border-radius: 10px;
 	border: none;
@@ -31,19 +32,6 @@
 	cursor: pointer;
 }
 
-@media (max-width: 640px) {
-	.Header {
-		padding: 15px 0;
-	}
-
-	.HeaderGroup {
-		grid-template-columns: repeat(4, auto);
-	}
-
-	.Header a:nth-child(4) {
-		display: none;
-	}
-}
 
 .Header button:hover {
 	background: white;
@@ -53,13 +41,27 @@
     transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1.0);
 }
 
-@keyframes HeroAnimation {
-    0% {
-        opacity: 0;
-        transform: translateY(20px)
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0px)
-    }
-  }
+
+
+@media (max-width: 640px) {
+	.Header {
+		padding: 15px 0;
+	}
+
+	.HeaderGroup {
+		grid-template-columns: repeat(1, auto);
+	}
+
+	.Header a:nth-child(2) {
+		display: none;
+	}
+	.Header a:nth-child(3) {
+		display: none;
+	}
+	.Header a:nth-child(4) {
+		display: none;
+	}
+	.Header a:nth-child(5) {
+		display: none;
+	}
+}

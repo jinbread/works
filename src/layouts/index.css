@@ -3,6 +3,7 @@ body {
   margin: 0;
   font-size: 20px;
   line-height: 1.3;
+  background-color: black
 }
 
 a {
@@ -16,6 +17,7 @@ a {
   background: url('https://cl.ly/3k1F152x261C/download/wallpaper3.jpg');
   background-size: cover;
   background-position: center;
+  position: relative;
 }
 
 .HeroGroup {
@@ -59,6 +61,12 @@ a {
   color: black;
 }
 
+.Hero svg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
 @media (max-width: 640px) {
   .HeroGroup {
 	padding: 100px 20px;
@@ -73,6 +81,14 @@ a {
   }
 }
 
+.Hero .Logos {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 40px;
+  margin: 100px 0;
+  justify-items: center;
+}
+
 @keyframes HeroAnimation {
   0% {
       opacity: 0;
@@ -81,5 +97,11 @@ a {
   100% {
       opacity: 1;
       transform: translateY(0px)
+  }
+}
+
+@media (max-width: 640px) {
+  .Hero .Logos {
+	grid-template-columns: repeat(3, 1fr);
   }
 }
