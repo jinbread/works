@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import * as THREE from 'three'
+import './Scene.css'
 
 class Scene extends Component{
     componentDidMount(){
@@ -71,6 +72,7 @@ class Scene extends Component{
     render(){
         return(
             <div
+                className={background-canvas}
                 ref={(mount) => { this.mount = mount }}
             />
         )
