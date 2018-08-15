@@ -11,8 +11,8 @@ class Scene extends Component{
         this.scene = new THREE.Scene()
         
         //ADD CAMERA
-        this.camera = new THREE.PerspectiveCamera(75, width / height, 3, 1000)
-        this.camera.position.z = 200
+        this.camera = new THREE.PerspectiveCamera(75, width / height, 1, 3000)
+        this.camera.position.z = 1000
         
         //ADD RENDERER
         this.renderer = new THREE.WebGLRenderer({ antialias: true })
@@ -23,20 +23,19 @@ class Scene extends Component{
         //ADD GROUP
         this.group = new THREE.Group()
         this.scene.add(this.group)
-        
-        const max = 200
-        const min = -200
 
-        for(let i = 0; i < 400; i++) {
-            const geometry = new THREE.SphereGeometry(Math.random() * 3 - 3.5, 32, 32)
+        for(let i = 0; i < 1000; i++) {
+            const geometry = new THREE.SphereGeometry(3, 32, 32)
             const material = new THREE.MeshBasicMaterial({ color: Math.random() * 0x808008 + 0x808080, wireframe: false })
             this.cube = new THREE.Mesh(geometry, material)
-            this.cube.position.x = Math.random() * (max - min) - max
-            this.cube.position.y = Math.random() * (max - min) - max
-            this.cube.position.z = Math.random() * (max - min) - max
+            this.cube.position.x = Math.random() * 2000 - 1000
+            this.cube.position.y = Math.random() * 2000 - 1000
+            this.cube.position.z = Math.random() * 2000 - 1000
             this.group.add(this.cube)
         }
         // console.log(this.group);
+
+        window.addEventListener( 'resize', this.onWindowResize, false );
 
         this.start()
     }
@@ -54,6 +53,14 @@ class Scene extends Component{
 
     stop = () => {
         cancelAnimationFrame(this.frameId)
+    }
+
+    onWindowResize = () => {
+        const windowHalfX = window.innerWidth / 2;
+        const windowHalfY = window.innerHeight / 2;
+        this.camera.aspect = window.innerWidth / window.innerHeight;
+        this.camera.updateProjectionMatrix();
+        this.renderer.setSize( window.innerWidth, window.innerHeight );
     }
 
     animate = () => {
