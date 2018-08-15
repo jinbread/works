@@ -16,6 +16,7 @@ class Scene extends Component{
         
         //ADD RENDERER
         this.renderer = new THREE.WebGLRenderer({ antialias: true })
+        this.renderer.setPixelRatio(window.devicePixelRatio)
         this.renderer.setClearColor('#000')
         this.renderer.setSize(width, height)
         this.mount.appendChild(this.renderer.domElement)
@@ -24,8 +25,8 @@ class Scene extends Component{
         this.group = new THREE.Group()
         this.scene.add(this.group)
 
-        for(let i = 0; i < 1000; i++) {
-            const geometry = new THREE.SphereGeometry(3, 32, 32)
+        for(let i = 0; i < 500; i++) {
+            const geometry = new THREE.SphereGeometry(3, 3, 3)
             const material = new THREE.MeshBasicMaterial({ color: Math.random() * 0x808008 + 0x808080, wireframe: false })
             this.cube = new THREE.Mesh(geometry, material)
             this.cube.position.x = Math.random() * 2000 - 1000
