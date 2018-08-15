@@ -14,7 +14,8 @@ const Layout = ({ children, data }) => (
       title={data.site.siteMetadata.title}
       meta={[
         { name: 'description', content: 'Interaction Designer based in Stockholm, Seoul' },
-        { name: 'keywords', content: 'interaction, design, designer, ixd, ux, stockholm' }
+        { name: 'keywords', content: 'interaction, design, designer, ixd, ux, stockholm' },
+        { property: 'og:image', content: 'https://github.com/jinbread/works/blob/master/src/images/preview.png'}
       ]}
     />
     {children()}
