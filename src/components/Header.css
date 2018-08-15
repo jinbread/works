@@ -36,7 +36,7 @@
 	color: white;
 	font-weight: 500;
 	font-size: 16px;
-	margin: 10px;
+	margin: 20px;
 }
 
 .Header button {
@@ -63,7 +63,7 @@
 
 @media (max-width: 640px) {
 	.Header {
-		padding: 30px 0;
+		padding: 20px 0;
 	}
 
 	.HeaderGroup {
@@ -82,4 +82,8 @@
 	.Header a:nth-child(5) {
 		display: none;
 	}
+	.MenuGroup {
+		display: none;
+	}
+	
 }
