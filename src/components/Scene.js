@@ -20,7 +20,7 @@ class Scene extends Component{
         this.renderer.setSize(width, height)
         this.mount.appendChild(this.renderer.domElement)
 
-        //ADD CUBE
+        //ADD GROUP
         this.group = new THREE.Group()
         this.scene.add(this.group)
         
@@ -70,12 +70,10 @@ class Scene extends Component{
     }
 
     render(){
-        const width = window.innerWidth
-        const height = window.innerHeight
         
         return(
             <div
-                width={width} height={height}
+                style={{ width: window.innerWidth, height: window.innerHeight }}
                 ref={(mount) => { this.mount = mount }}
             />
         )
