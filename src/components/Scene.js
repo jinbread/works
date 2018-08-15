@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import * as THREE from 'three'
+import window from 'global'
 
 class Scene extends Component{
     componentDidMount(){
