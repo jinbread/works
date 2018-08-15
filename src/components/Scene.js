@@ -1,6 +1,10 @@
 import React, { Component } from 'react'
 import * as THREE from 'three'
+<<<<<<< HEAD
 import window from 'global'
+=======
+import './Scene.css'
+>>>>>>> 3f9051f22bf09720db7e61ded3d2a2194c46774e
 
 class Scene extends Component{
     componentDidMount(){
@@ -70,9 +74,12 @@ class Scene extends Component{
     }
 
     render(){
+        const width = window.innerWidth
+        const height = window.innerHeight
+        
         return(
             <div
-                style={{ width: window.innerWidth, height: window.innerHeight }}
+                width={width} height={height}
                 ref={(mount) => { this.mount = mount }}
             />
         )
