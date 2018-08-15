@@ -15,7 +15,7 @@ const Layout = ({ children, data }) => (
       meta={[
         { name: 'description', content: 'Interaction Designer based in Stockholm, Seoul' },
         { name: 'keywords', content: 'interaction, design, designer, ixd, ux, stockholm' },
-        { property: 'og:image', content: 'https://github.com/jinbread/works/blob/master/src/images/preview.png'}
+        { property: 'og:image', content: 'https://preview.ibb.co/dta06U/preview.png'}
       ]}
     />
     {children()}
