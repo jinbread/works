@@ -15,6 +15,7 @@ const Layout = ({ children, data }) => (
       meta={[
         { name: 'description', content: 'Interaction Designer based in Stockholm, Seoul' },
         { name: 'keywords', content: 'interaction, design, designer, ixd, ux, stockholm' },
+        { name: 'image', content: '../images/preview.png'}
       ]}
     />
     {children()}

@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import * as THREE from 'three'
 import window from 'global'
+import styles from './Scene.css'
 
 class Scene extends Component{
     componentDidMount(){
@@ -77,10 +78,13 @@ class Scene extends Component{
         this.renderer.render(this.scene, this.camera)
     }
 
+
+
     render(){
         
         return(
             <div
+                className={styles.container}
                 style={{ width: window.innerWidth, height: window.innerHeight }}
                 ref={(mount) => { this.mount = mount }}
             />

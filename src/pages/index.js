@@ -6,6 +6,7 @@ import Scene from '../components/Scene'
 const IndexPage = () => (
   <div>
     <Scene />
+    
     {/* <div className="Hero">
       <div className="HeroGroup">
         <h1>Jinbread works</h1>
