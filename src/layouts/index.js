@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 
 import Header from '../components/header'
+import Preview from '../images/preview.png'
 
 import './index.css'
 
@@ -15,7 +16,7 @@ const Layout = ({ children, data }) => (
       meta={[
         { name: 'description', content: 'Interaction Designer based in Stockholm, Seoul' },
         { name: 'keywords', content: 'interaction, design, designer, ixd, ux, stockholm' },
-        { property: 'og:image', content: '../images/preview.png'}
+        { property: 'og:image', content: {Preview}}
       ]}
     />
     {children()}
